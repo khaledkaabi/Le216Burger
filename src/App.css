@@ -1,0 +1,105 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.bg-image-with-gradient {
+    background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent), url('/maskgroup.svg');
+}
+
+.custom-select {
+  position: relative;
+  width: 220px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+/* Affichage de la sélection */
+.custom-select .selected {
+  border: 1px solid #d1d5db; /* gris clair */
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+  position: relative;
+}
+
+/* Flèche à droite */
+.custom-select .selected::after {
+  content: "▼";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #6b7280; /* gris moyen */
+}
+
+/* Liste des options cachée */
+.custom-select .options {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 20;
+  list-style: none;
+  padding: 4px 0;
+  margin: 0;
+}
+
+/* Style de chaque option */
+.custom-select .options li {
+  padding: 8px 12px;
+  transition: background 0.2s;
+}
+
+.custom-select .options li:hover {
+  background: #f3f4f6; /* gris clair hover */
+  border-radius: 6px;
+}
+
+/* Toggle open */
+.custom-select.open .options {
+  display: block;
+}
