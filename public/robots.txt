@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://le216-burger.vercel.app/sitemap.xml
