@@ -28,6 +28,7 @@ export function useSEO({ title, description, url, canonical }: SEOProps) {
         link.setAttribute("rel", "canonical");
         document.head.appendChild(link);
       }
+      
       link.setAttribute("href", canonical || url || window.location.href);
     }
   }, [title, description, url, canonical]);
