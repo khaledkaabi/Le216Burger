@@ -7,7 +7,7 @@ const SectionHome = () => {
             <div className="absolute inset-0 bg-[url(/home-bg.jpg)] bg-cover bg-center opacity-40"></div>
             <div className='flex relative z-999 flex-col gap-4 p-8'>
                 <h1 className='text-5xl text-black font-bold text-center'>Bienvenue chez Le 216 Burger</h1>
-                <h2 className='text-5xl text-black font-bold text-center'>Le goût du vrai plaisir !</h2>
+                <h2 className='text-4xl text-black font-bold text-center'>Le goût du vrai plaisir !</h2>
             </div>
             <div className="md:p-10 p-4 z-10">
                 <ImageList variant="woven" cols={3} gap={8}>

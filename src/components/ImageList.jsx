@@ -5,8 +5,8 @@ const ImageListSection = () => {
 
     return (
         <div className='p-8'>
-            <div className='p-8'>
-                <p className='font-semibold text-lg text-black text-left'>
+            <div className='pt-4 pb-10'>
+                <p className='font-semibold text-xl text-black text-left'>
                     Chez Le216 Burger, chaque bouchée est une explosion de saveurs — croustillant, juteux et généreux, comme on les aime !
                     <br></br>
                     Découvrez nos créations originales de burgers et sandwichs, préparés avec passion et servis avec style.
