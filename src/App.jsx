@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import { useSEO } from './hooks/useSeo';
 import Home from './page';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Menu from './page/Menu';
 
 const AppRoutes = () => {
 
@@ -15,6 +16,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/menu" element={<Menu />} />
     </Routes>
   )
 }

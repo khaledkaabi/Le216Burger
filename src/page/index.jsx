@@ -8,10 +8,10 @@ const Home = () => {
 
     return (
         <>
-        <SectionHome />
-        <ImageListSection />
-           <FooterContext />
-           <FooterMedia />
+            <SectionHome />
+            <ImageListSection />
+            <FooterContext />
+            <FooterMedia />
         </>
     )
 }

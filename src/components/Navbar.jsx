@@ -1,13 +1,22 @@
-// src/components/Navbar.jsx
-import { useState } from 'react';
-import { Phone, User, FileText, Menu, X, CircleUser, MessageCircleQuestionMark, Heart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Phone, Menu, X, Heart } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 
+  const location = useLocation();
   const navigate = useNavigate();
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedSection, setSelectedSection] = useState("home");
+
+  useEffect(() => {
+    if (location.pathname === "/menu") {
+      setSelectedSection('menu')
+    } else {
+      setSelectedSection('home')
+    }
+  }, [location]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -15,6 +24,10 @@ const Navbar = () => {
 
   const handleNavigateHome = () => {
     navigate('/')
+  }
+
+  const handleNavigateMenu = () => {
+    navigate('/menu')
   }
 
 
@@ -43,72 +56,72 @@ const Navbar = () => {
       <div className="px-4 md:px-10 pt-1 bg-white">
         <div className="flex justify-between items-center">
           <div>
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div
-              className={`text-sm font-medium ${selectedSection === 'home' ? 'border-b-4 border-orange-primary' : 'border-b-4 border-transparent'}`}
-            >
-              <div className='px-2 py-2'>
-                <a onClick={() => {
-                  setSelectedSection('home')
-                  handleNavigateHome()
-                }} href='#'>Le 216 Burger</a>
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <div
+                className={`text-sm font-medium ${selectedSection === 'home' ? 'border-b-4 border-orange-primary' : 'border-b-4 border-transparent'}`}
+              >
+                <div className='px-2 py-2'>
+                  <a className='cursor-pointer' onClick={() => {
+                    setSelectedSection('home')
+                    handleNavigateHome()
+                  }}>Le 216 Burger</a>
+                </div>
+              </div>
+              <div
+                className={`text-sm font-medium ${selectedSection === 'menu' ? 'border-b-4 border-orange-primary' : 'border-b-4 border-transparent'}`}
+              >
+                <div className='px-2 py-2'>
+                  <a className='cursor-pointer' onClick={() => {
+                    setSelectedSection('menu')
+                    handleNavigateMenu()
+                  }}>Nos spécialités</a>
+                </div>
               </div>
             </div>
-             <div
-              className={`text-sm font-medium ${selectedSection === 'menu' ? 'border-b-4 border-orange-primary' : 'border-b-4 border-transparent'}`}
-            >
-              <div className='px-2 py-2'>
-                <a onClick={() => {
-                  setSelectedSection('menu')
-                  handleNavigateHome()
-                }} href='#'>Nos spécialités</a>
-              </div>
+            <div className='flex justify-start'>
+              <button
+                className="lg:hidden p-2 hover:bg-orange-600 rounded transition-colors duration-200"
+                onClick={toggleMobileMenu}
+                aria-label="Toggle mobile menu"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
             </div>
-          </div>
-          <div className='flex justify-start'>
-        <button
-          className="lg:hidden p-2 hover:bg-orange-600 rounded transition-colors duration-200"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-        >
-          {isMobileMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
-        </button>
-      </div>
-      
+
           </div>
           <Heart className='animate-bounce text-orange-primary' />
         </div>
         {isMobileMenuOpen && (
-        <div className="lg:hidden mt-4 pb-4">
-          <div className="flex flex-col items-center space-y-2 mt-4">
-            <div
-              className={`text-sm font-medium ${selectedSection === 'home' ? 'border-b-4 border-orange-primary' : 'border-b-4 border-transparent'}`}
-            >
-              <div className='px-2 py-2'>
-                <a onClick={() => {
-                  handleNavigateHome()
-                  setSelectedSection('home')
-                }} href='#'>Le 216 Burger</a>
+          <div className="lg:hidden mt-4 pb-4">
+            <div className="flex flex-col items-center space-y-2 mt-4">
+              <div
+                className={`text-sm font-medium ${selectedSection === 'home' ? 'border-b-4 border-orange-primary' : 'border-b-4 border-transparent'}`}
+              >
+                <div className='px-2 py-2'>
+                  <a className='cursor-pointer' onClick={() => {
+                    handleNavigateHome()
+                    setSelectedSection('home')
+                  }}>Le 216 Burger</a>
+                </div>
               </div>
-            </div>
-            <div
-              className={`text-sm font-medium ${selectedSection === 'menu' ? 'border-b-4 border-orange-primary' : 'border-b-4 border-transparent'}`}
-            >
-              <div className='px-2 py-2'>
-                <a onClick={() => {
-                  handleNavigateHome()
-                  setSelectedSection('menu')
-                }} href='#'>Nos spécialités</a>
+              <div
+                className={`text-sm font-medium ${selectedSection === 'menu' ? 'border-b-4 border-orange-primary' : 'border-b-4 border-transparent'}`}
+              >
+                <div className='px-2 py-2'>
+                  <a className='cursor-pointer' onClick={() => {
+                    handleNavigateMenu()
+                    setSelectedSection('menu')
+                  }}>Nos spécialités</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
       </div>
     </nav>
   );
