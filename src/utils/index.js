@@ -1,7 +1,7 @@
 export const itemData = [
     {
         img: '/burger1.jpg',
-        title: 'Breakfast',
+        title: 'burger nantes',
         author: 'le 216 Burger',
         rows: 1,
         cols: 1,
@@ -9,69 +9,69 @@ export const itemData = [
     },
     {
         img: '/burger2.jpg',
-        title: 'Burger',
+        title: 'Burger nantes',
         author: 'le 216 Burger'
     },
     {
         img: '/burger3.jpg',
-        title: 'Burger',
+        title: 'Burger nantes',
         author: 'le 216 Burger'
     },
     {
         img: '/burger4.jpg',
-        title: 'Burger',
+        title: 'Burger nantes',
         author: 'le 216 Burger'
     },
     {
         img: '/burger5.jpg',
-        title: 'Burger',
+        title: 'Burger nantes',
         author: 'le 216 Burger'
     },
     {
         img: '/plat1.jpg',
-        title: 'plat',
+        title: 'plat nantes',
         author: 'le 216 Burger',
         cols: 2,
     },
     {
         img: '/plat2.jpg',
-        title: 'plat',
+        title: 'plat nantes',
         author: 'le 216 Burger',
         cols: 2,
     },
     {
         img: '/plat3.jpg',
-        title: 'plat',
+        title: 'plat nantes',
         author: 'le 216 Burger',
         cols: 2,
     },
     {
         img: '/plat4.jpg',
-        title: 'plat',
+        title: 'plat nantes',
         author: 'le 216 Burger',
         cols: 2,
     },
     {
         img: '/plat5.jpg',
-        title: 'plat',
+        title: 'plat nantes',
         author: 'le 216 Burger',
         cols: 2,
     },
     {
         img: '/plat6.jpg',
-        title: 'plat',
+        title: 'plat nantes',
         author: 'le 216 Burger',
         cols: 2,
     },
     {
         img: '/plat7.jpg',
-        title: 'plat',
+        title: 'plat nantes',
         author: 'le 216 Burger',
         cols: 2,
     },
     {
         img: '/plat8.jpg',
-        title: 'plat',
+        title: 'plat nantes',
         author: 'le 216 Burger',
         cols: 2,
     },
@@ -83,22 +83,22 @@ export const itemData = [
     },
     {
         img: '/sandwich1.jpg',
-        title: 'Sandwich',
+        title: 'Sandwich nantes',
         author: 'le 216 Burger',
     },
     {
         img: '/sandwich2.jpg',
-        title: 'Sandwich',
+        title: 'Sandwich nantes',
         author: 'le 216 Burger',
     },
     {
         img: '/sandwich3.jpg',
-        title: 'Sandwich',
+        title: 'Sandwich nantes',
         author: 'le 216 Burger',
     },
     {
         img: '/sandwich4.jpg',
-        title: 'Sandwich',
+        title: 'Sandwich nantes',
         author: 'le 216 Burger',
     }
 ];

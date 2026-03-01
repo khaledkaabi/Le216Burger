@@ -32,7 +32,7 @@ export default ImageListSection;
 const itemData = [
     {
         img: '/burger1.jpg',
-        title: 'Breakfast',
+        title: 'burger nantes',
         author: '@bkristastucchio',
         rows: 1,
         cols: 1,
@@ -40,29 +40,29 @@ const itemData = [
     },
     {
         img: '/sandwich2.jpg',
-        title: 'Burger',
+        title: 'Burger nantes',
         author: '@rollelflex_graphy726',
     },
     {
         img: '/burger2.jpg',
-        title: 'Camera',
+        title: 'burger nantes france',
         author: '@helloimnik',
     },
     {
         img: '/plat3.jpg',
-        title: 'Coffee',
+        title: 'plat nantes',
         author: '@nolanissac',
         cols: 2,
     },
     {
         img: '/frit.jpg',
-        title: 'Hats',
+        title: 'frit nantes',
         author: '@hjrc33',
         cols: 2,
     },
     {
         img: 'plat4.jpg',
-        title: 'Honey',
+        title: 'plat restaurant nantes',
         author: '@arwinneil',
         rows: 2,
         cols: 2,
